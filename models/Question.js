@@ -18,7 +18,11 @@ class Question{
     this.content = content
   }
 
-  insert(){}
+  insert(){
+    return new Promise(function(resolve){
+      return resolve("place holder");
+    })
+  }
 
 }
 
