@@ -18,7 +18,7 @@ class Question{
     this.content = content
   }
 
-  insert()
+  insert(){}
 
 }
 
