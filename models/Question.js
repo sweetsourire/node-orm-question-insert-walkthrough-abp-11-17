@@ -19,11 +19,12 @@ class Question{
   }
 
   insert(){
-    const self = this
+    const self = this // THIS IS THE CRUX
     const sql = `INSERT INTO questions (content) VALUES (?)`
     return new Promise(function(resolve){
       db.run(sql, [self.content], function(err, result){
-        resolve("Row inserted!")
+        self.id = this.lastID
+        resolve("Row Inserted!")      
       })
     })
   }
